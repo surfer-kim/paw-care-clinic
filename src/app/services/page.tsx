@@ -25,7 +25,7 @@ export default function ServicesPage() {
                                 <h3 className="text-xl font-bold text-green-800 mb-4">Wellness Examinations</h3>
                                 <p className="text-gray-600 leading-relaxed">
                                     Comprehensive annual and bi-annual health checkups to detect potential issues early and maintain your
-                                    pet's optimal health.
+                                    pet&apos;s optimal health.
                                 </p>
                             </div>
                             <div className="bg-white rounded-lg shadow-md p-6 border border-green-100">
@@ -38,7 +38,7 @@ export default function ServicesPage() {
                             <div className="bg-white rounded-lg shadow-md p-6 border border-green-100">
                                 <h3 className="text-xl font-bold text-green-800 mb-4">Parasite Prevention</h3>
                                 <p className="text-gray-600 leading-relaxed">
-                                    Flea, tick, and heartworm prevention programs tailored to your pet's lifestyle and risk factors.
+                                    Flea, tick, and heartworm prevention programs tailored to your pet&apos;s lifestyle and risk factors.
                                 </p>
                             </div>
                         </div>
@@ -112,7 +112,7 @@ export default function ServicesPage() {
                             <div className="bg-white rounded-lg shadow-md p-6 border border-green-100">
                                 <h3 className="text-xl font-bold text-green-800 mb-4">Dermatology</h3>
                                 <p className="text-gray-600 leading-relaxed">
-                                    Treatment of skin conditions, allergies, and dermatological disorders affecting your pet's comfort and
+                                    Treatment of skin conditions, allergies, and dermatological disorders affecting your pet&apos;s comfort and
                                     health.
                                 </p>
                             </div>
@@ -158,9 +158,9 @@ export default function ServicesPage() {
             {/* Call to Action */}
             <section className="bg-green-800 py-16">
                 <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-                    <h2 className="text-3xl font-black text-white mb-6">Ready to Schedule Your Pet's Care?</h2>
+                    <h2 className="text-3xl font-black text-white mb-6">Ready to Schedule Your Pet&apos;s Care?</h2>
                     <p className="text-xl text-green-100 mb-8 leading-relaxed">
-                        Contact us today to discuss your pet's specific needs and schedule an appointment with our experienced
+                        Contact us today to discuss your pet&apos;s specific needs and schedule an appointment with our experienced
                         veterinary team.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">

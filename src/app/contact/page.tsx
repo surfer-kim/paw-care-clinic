@@ -9,7 +9,7 @@ export default function ContactPage() {
                     <div className="text-center">
                         <h1 className="text-4xl md:text-5xl font-black text-foreground mb-4 text-balance">Contact Us</h1>
                         <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
-                            Get in touch with our caring team. We're here to help you and your pet with any questions or concerns.
+                            Get in touch with our caring team. We&apos;re here to help you and your pet with any questions or concerns.
                         </p>
                     </div>
                 </div>
@@ -159,7 +159,7 @@ export default function ContactPage() {
                                         <div>
                                             <h3 className="font-semibold text-foreground">Email</h3>
                                             <p className="text-muted-foreground">info@pawcareclinic.com</p>
-                                            <p className="text-sm text-muted-foreground">We'll respond within 24 hours</p>
+                                            <p className="text-sm text-muted-foreground">We&apos;ll respond within 24 hours</p>
                                         </div>
                                     </div>
 

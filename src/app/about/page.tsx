@@ -1,4 +1,5 @@
 import { Award, Clock, Heart, Shield, Star, Users } from "lucide-react"
+import Image from 'next/image'
 
 const teamMembers = [
     {
@@ -92,7 +93,7 @@ export default function AboutPage() {
                             </button>
                         </div>
                         <div className="relative">
-                            <img
+                            <Image
                                 src="/modern-veterinary-clinic-interior-with-happy-pets.jpg"
                                 alt="Modern veterinary clinic interior"
                                 className="rounded-lg shadow-lg w-full"
@@ -152,7 +153,7 @@ export default function AboutPage() {
                             >
                                 <div className="flex flex-col sm:flex-row">
                                     <div className="sm:w-1/3 pl-4">
-                                        <img
+                                        <Image
                                             src={member.image || "/placeholder.svg"}
                                             alt={member.name}
                                             className="w-full h-48 sm:h-full object-cover"
@@ -225,7 +226,7 @@ export default function AboutPage() {
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div className="relative">
-                            <img
+                            <Image
                                 src="/state-of-the-art-veterinary-equipment-and-surgery.jpg"
                                 alt="State-of-the-art veterinary equipment"
                                 className="rounded-lg shadow-lg w-full"
@@ -274,7 +275,7 @@ export default function AboutPage() {
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">Experience the PawCare Difference</h2>
                     <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto text-balance">
-                        Join thousands of satisfied pet owners who trust us with their beloved companions' health and well-being.
+                        Join thousands of satisfied pet owners who trust us with their beloved companions&apos; health and well-being.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/80 bg-white text-primary hover:bg-white/90 h-10 rounded-md px-6">

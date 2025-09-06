@@ -14,7 +14,7 @@ export function Footer() {
                             <span className="text-xl font-bold text-foreground">PawCare Clinic</span>
                         </div>
                         <p className="text-sm text-muted-foreground leading-relaxed">
-                            Providing compassionate and professional veterinary care for your beloved pets. Your pet's health and
+                            Providing compassionate and professional veterinary care for your beloved pets. Your pet&apos;s health and
                             happiness is our top priority.
                         </p>
                         <div className="flex space-x-4">

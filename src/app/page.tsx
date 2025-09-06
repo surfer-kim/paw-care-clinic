@@ -1,6 +1,7 @@
 "use client"
 
 import { ChevronLeft, ChevronRight, Clock, Heart, Phone, Shield, Star, Users } from "lucide-react"
+import Image from 'next/image'
 import { useEffect, useState } from "react"
 
 const carouselImages = [
@@ -93,7 +94,7 @@ export default function HomePage() {
             className={`absolute inset-0 transition-opacity duration-1000 ${index === currentSlide ? "opacity-100" : "opacity-0"
               }`}
           >
-            <img src={image.src || "/placeholder.svg"} alt={image.alt} className="w-full h-full object-cover" />
+            <Image src={image.src || "/placeholder.svg"} alt={image.alt} className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-black/40" />
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="text-center text-white max-w-4xl px-4">
@@ -209,7 +210,7 @@ export default function HomePage() {
               </button>
             </div>
             <div className="relative">
-              <img
+              <Image
                 src="/veterinarian-with-happy-dog-and-cat-in-modern-clin.jpg"
                 alt="Veterinarian with happy pets"
                 className="rounded-lg shadow-lg w-full"
@@ -225,7 +226,7 @@ export default function HomePage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-balance">What Our Clients Say</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
-              Don't just take our word for it. Here's what pet owners have to say about our services.
+              Don&apos;t just take our word for it. Here&apos;s what pet owners have to say about our services.
             </p>
           </div>
 
@@ -241,7 +242,7 @@ export default function HomePage() {
                       <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  <p className="text-muted-foreground mb-4 italic">"{testimonial.text}"</p>
+                  <p className="text-muted-foreground mb-4 italic">&quot;{testimonial.text}&quot;</p>
                   <p className="font-semibold text-foreground">{testimonial.name}</p>
                 </div>
               </div>
