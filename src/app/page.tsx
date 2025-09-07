@@ -1,29 +1,7 @@
 "use client"
 
-import { ChevronLeft, ChevronRight, Clock, Heart, Phone, Shield, Star, Users } from "lucide-react"
-import Image from 'next/image'
-import { useEffect, useState } from "react"
-
-const carouselImages = [
-  {
-    src: "/happy-golden-retriever-at-veterinary-clinic.jpg",
-    alt: "Happy golden retriever at veterinary clinic",
-    title: "Comprehensive Pet Care",
-    subtitle: "Your pet's health and happiness is our priority",
-  },
-  {
-    src: "/veterinarian-examining-cute-cat.jpg",
-    alt: "Veterinarian examining cute cat",
-    title: "Expert Veterinary Services",
-    subtitle: "Professional care from experienced veterinarians",
-  },
-  {
-    src: "/playful-puppies-in-modern-veterinary-clinic.jpg",
-    alt: "Playful puppies in modern veterinary clinic",
-    title: "Modern Facilities",
-    subtitle: "State-of-the-art equipment for the best care",
-  },
-]
+import { Clock, Heart, Phone, Shield, Star, Users } from "lucide-react"
+import Image from "next/image"
 
 const services = [
   {
@@ -56,90 +34,47 @@ const testimonials = [
   },
   {
     name: "Mike Chen",
-    text: "Professional, caring, and knowledgeable. I wouldn't trust my pets with anyone else.",
+    text: "Professional, caring, and knowledgeable. I wouldn&apos;t trust my pets with anyone else.",
     rating: 5,
   },
   {
     name: "Emily Davis",
-    text: "Great facilities and the veterinarians really know what they're doing. Highly recommend!",
+    text: "Great facilities and the veterinarians really know what they&apos;re doing. Highly recommend!",
     rating: 5,
   },
 ]
 
 export default function HomePage() {
-  const [currentSlide, setCurrentSlide] = useState(0)
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % carouselImages.length)
-    }, 5000)
-    return () => clearInterval(timer)
-  }, [])
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % carouselImages.length)
-  }
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + carouselImages.length) % carouselImages.length)
-  }
 
   return (
     <main className="min-h-screen">
-      {/* Hero Carousel */}
+      {/* Hero Video Overlay */}
       <section className="relative h-[600px] overflow-hidden">
-        {carouselImages.map((image, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${index === currentSlide ? "opacity-100" : "opacity-0"
-              }`}
-          >
-            <Image src={image.src || "/placeholder.svg"} alt={image.alt} className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-black/40" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-center text-white max-w-4xl px-4">
-                <h1 className="text-4xl md:text-6xl font-bold mb-4 text-balance">{image.title}</h1>
-                <p className="text-xl md:text-2xl mb-8 text-balance">{image.subtitle}</p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 h-10 rounded-md px-6">
-                    Book Appointment
-                  </button>
-                  <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground border-white text-white hover:bg-white hover:text-foreground bg-transparent h-10 rounded-md px-6">
-                    Learn More
-                  </button>
-                </div>
-              </div>
+        <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">
+          <source src="/banner-video.mp4" type="video/mp4" />
+          {/* Fallback image if video doesn't load */}
+          <Image
+            src="/happy-golden-retriever-at-veterinary-clinic.jpg"
+            alt="Pet clinic hero"
+            width={1024}
+            height={600}
+            className="w-full h-full object-cover"
+          />
+        </video>
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="text-center text-white max-w-4xl px-4">
+            <h1 className="text-4xl md:text-6xl font-bold mb-4 text-balance">Where Modern Care Meets Meaningful Connection</h1>
+            <p className="text-xl md:text-2xl mb-8 text-balance">We&apos;re not your typical vet clinic. At PawCare Clinic, we provide relationship-driven medicine because your pet deserves care that’s both advanced and attentive.</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 h-10 rounded-md px-6">
+                Book Appointment
+              </button>
+              <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground border-white text-white hover:bg-white hover:text-foreground bg-transparent h-10 rounded-md px-6">
+                Learn More
+              </button>
             </div>
           </div>
-        ))}
-
-        {/* Carousel Controls */}
-        <button
-          onClick={prevSlide}
-          className="absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/20 hover:bg-white/30 transition-colors"
-          aria-label="Previous slide"
-        >
-          <ChevronLeft className="h-6 w-6 text-white" />
-        </button>
-        <button
-          onClick={nextSlide}
-          className="absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/20 hover:bg-white/30 transition-colors"
-          aria-label="Next slide"
-        >
-          <ChevronRight className="h-6 w-6 text-white" />
-        </button>
-
-        {/* Carousel Indicators */}
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
-          {carouselImages.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={`w-3 h-3 rounded-full transition-colors ${index === currentSlide ? "bg-white" : "bg-white/50"
-                }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
         </div>
       </section>
 
@@ -210,7 +145,7 @@ export default function HomePage() {
               </button>
             </div>
             <div className="relative">
-              <Image
+              <img
                 src="/veterinarian-with-happy-dog-and-cat-in-modern-clin.jpg"
                 alt="Veterinarian with happy pets"
                 className="rounded-lg shadow-lg w-full"
