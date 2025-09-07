@@ -96,6 +96,8 @@ export default function AboutPage() {
                             <Image
                                 src="/modern-veterinary-clinic-interior-with-happy-pets.jpg"
                                 alt="Modern veterinary clinic interior"
+                                width={1024}
+                                height={1024}
                                 className="rounded-lg shadow-lg w-full"
                             />
                         </div>
@@ -156,6 +158,8 @@ export default function AboutPage() {
                                         <Image
                                             src={member.image || "/placeholder.svg"}
                                             alt={member.name}
+                                            width={500}
+                                            height={500}
                                             className="w-full h-48 sm:h-full object-cover"
                                         />
                                     </div>
@@ -229,6 +233,8 @@ export default function AboutPage() {
                             <Image
                                 src="/state-of-the-art-veterinary-equipment-and-surgery.jpg"
                                 alt="State-of-the-art veterinary equipment"
+                                width={584}
+                                height={584}
                                 className="rounded-lg shadow-lg w-full"
                             />
                         </div>
