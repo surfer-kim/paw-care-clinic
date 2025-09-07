@@ -1,6 +1,6 @@
 "use client"
 
-import { Menu, X } from "lucide-react"
+import { Facebook, Instagram, Menu, Twitter, X } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
@@ -37,11 +37,19 @@ export function Header() {
                         </Link>
                     </nav>
 
-                    {/* CTA Button */}
-                    <div className="hidden md:flex">
-                        <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 h-9 px-4 py-2">
-                            Book Appointment
-                        </button>
+                    <div className="hidden md:flex space-x-4">
+                        <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                            <Facebook className="h-5 w-5" />
+                            <span className="sr-only">Facebook</span>
+                        </Link>
+                        <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                            <Twitter className="h-5 w-5" />
+                            <span className="sr-only">Twitter</span>
+                        </Link>
+                        <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                            <Instagram className="h-5 w-5" />
+                            <span className="sr-only">Instagram</span>
+                        </Link>
                     </div>
 
                     {/* Mobile Menu Button */}
@@ -82,9 +90,6 @@ export function Header() {
                             >
                                 Contact
                             </Link>
-                            <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 h-9 px-4 py-2 w-full mt-4">
-                                Book Appointment
-                            </button>
                         </nav>
                     </div>
                 )}
