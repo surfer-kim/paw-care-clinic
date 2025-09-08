@@ -26,6 +26,7 @@ export default function RootLayout({
           {children}
           <Footer />
         </Suspense>
+        <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
       </body>
     </html>
   )
